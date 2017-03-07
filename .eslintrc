@@ -1,0 +1,14 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
+  "env": {
+    "es6": true,
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "no-plusplus": 0,
+    "comma-dangle": 0,
+    "no-extend-native": 0
+  }
+}
