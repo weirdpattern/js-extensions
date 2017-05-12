@@ -1,11 +1,4 @@
-import {
-  clear,
-  first,
-  flatten,
-  head,
-  last,
-  tail
-} from '../lib/arrays';
+import { clear, first, flatten, head, last, tail } from '../lib/arrays';
 
 describe('clear', () => {
   it('clears the content of an array', () => {
@@ -15,10 +8,10 @@ describe('clear', () => {
   });
 
   it('throws exception when a non-array is passed', () => {
-    expect(() => { clear(true); }).toThrow();
-    expect(() => { clear(0); }).toThrow();
-    expect(() => { clear(''); }).toThrow();
-    expect(() => { clear({}); }).toThrow();
+    expect(() => clear(true)).toThrow();
+    expect(() => clear(0)).toThrow();
+    expect(() => clear('')).toThrow();
+    expect(() => clear({})).toThrow();
   });
 });
 
@@ -47,21 +40,21 @@ describe('first', () => {
   });
 
   it('throws an exception when a non-array is passed', () => {
-    expect(() => { first(true); }).toThrow();
-    expect(() => { first(0); }).toThrow();
-    expect(() => { first(''); }).toThrow();
-    expect(() => { first({}); }).toThrow();
+    expect(() => first(true)).toThrow();
+    expect(() => first(0)).toThrow();
+    expect(() => first('')).toThrow();
+    expect(() => first({})).toThrow();
 
-    expect(() => { first(true, 1); }).toThrow();
-    expect(() => { first(0, 1); }).toThrow();
-    expect(() => { first('', 1); }).toThrow();
-    expect(() => { first({}, 1); }).toThrow();
+    expect(() => first(true, 1)).toThrow();
+    expect(() => first(0, 1)).toThrow();
+    expect(() => first('', 1)).toThrow();
+    expect(() => first({}, 1)).toThrow();
   });
 
   it('throws an exception when the count is less than 1', () => {
-    expect(() => { first([1, 2, 3, 4], 0); }).toThrow();
-    expect(() => { first([1, 2, 3, 4], -1); }).toThrow();
-    expect(() => { first([1, 2, 3, 4], -2); }).toThrow();
+    expect(() => first([1, 2, 3, 4], 0)).toThrow();
+    expect(() => first([1, 2, 3, 4], -1)).toThrow();
+    expect(() => first([1, 2, 3, 4], -2)).toThrow();
   });
 });
 
@@ -94,9 +87,7 @@ describe('flatten', () => {
   });
 
   it('returns a flattened array when multiple arrays with sub-arrays are passed', () => {
-    expect(
-      flatten([true, [[false], false]], [[true], false])
-    ).toEqual([true, false, false, true, false]);
+    expect(flatten([true, [[false], false]], [[true], false])).toEqual([true, false, false, true, false]);
     expect(flatten([1, [[2], 3]], [4, 5])).toEqual([1, 2, 3, 4, 5]);
     expect(flatten(['', [['a'], 'b']], ['c', 'd'])).toEqual(['', 'a', 'b', 'c', 'd']);
   });
@@ -120,15 +111,15 @@ describe('head', () => {
   });
 
   it('throws an exception when a non-array is passed', () => {
-    expect(() => { head(true); }).toThrow();
-    expect(() => { head(0); }).toThrow();
-    expect(() => { head(''); }).toThrow();
-    expect(() => { head({}); }).toThrow();
+    expect(() => head(true)).toThrow();
+    expect(() => head(0)).toThrow();
+    expect(() => head('')).toThrow();
+    expect(() => head({})).toThrow();
 
-    expect(() => { head(true, 1); }).toThrow();
-    expect(() => { head(0, 1); }).toThrow();
-    expect(() => { head('', 1); }).toThrow();
-    expect(() => { head({}, 1); }).toThrow();
+    expect(() => head(true, 1)).toThrow();
+    expect(() => head(0, 1)).toThrow();
+    expect(() => head('', 1)).toThrow();
+    expect(() => head({}, 1)).toThrow();
   });
 });
 
@@ -157,21 +148,21 @@ describe('last', () => {
   });
 
   it('throws an exception when a non-array is passed', () => {
-    expect(() => { last(true); }).toThrow();
-    expect(() => { last(0); }).toThrow();
-    expect(() => { last(''); }).toThrow();
-    expect(() => { last({}); }).toThrow();
+    expect(() => last(true)).toThrow();
+    expect(() => last(0)).toThrow();
+    expect(() => last('')).toThrow();
+    expect(() => last({})).toThrow();
 
-    expect(() => { last(true, 1); }).toThrow();
-    expect(() => { last(0, 1); }).toThrow();
-    expect(() => { last('', 1); }).toThrow();
-    expect(() => { last({}, 1); }).toThrow();
+    expect(() => last(true, 1)).toThrow();
+    expect(() => last(0, 1)).toThrow();
+    expect(() => last('', 1)).toThrow();
+    expect(() => last({}, 1)).toThrow();
   });
 
   it('throws an exception when the count is less than 1', () => {
-    expect(() => { last([1, 2, 3, 4], 0); }).toThrow();
-    expect(() => { last([1, 2, 3, 4], -1); }).toThrow();
-    expect(() => { last([1, 2, 3, 4], -2); }).toThrow();
+    expect(() => last([1, 2, 3, 4], 0)).toThrow();
+    expect(() => last([1, 2, 3, 4], -1)).toThrow();
+    expect(() => last([1, 2, 3, 4], -2)).toThrow();
   });
 });
 
@@ -193,14 +184,14 @@ describe('tail', () => {
   });
 
   it('throws an exception when a non-array is passed', () => {
-    expect(() => { tail(true); }).toThrow();
-    expect(() => { tail(0); }).toThrow();
-    expect(() => { tail(''); }).toThrow();
-    expect(() => { tail({}); }).toThrow();
+    expect(() => tail(true)).toThrow();
+    expect(() => tail(0)).toThrow();
+    expect(() => tail('')).toThrow();
+    expect(() => tail({})).toThrow();
 
-    expect(() => { tail(true, 1); }).toThrow();
-    expect(() => { tail(0, 1); }).toThrow();
-    expect(() => { tail('', 1); }).toThrow();
-    expect(() => { tail({}, 1); }).toThrow();
+    expect(() => tail(true, 1)).toThrow();
+    expect(() => tail(0, 1)).toThrow();
+    expect(() => tail('', 1)).toThrow();
+    expect(() => tail({}, 1)).toThrow();
   });
 });

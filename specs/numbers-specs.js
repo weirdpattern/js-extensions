@@ -12,19 +12,27 @@ import {
   decades,
   centuries,
   isEven,
-  isOdd
+  isOdd,
 } from '../lib/numbers';
 
 describe('nanoseconds', () => {
   const unit = nanoseconds(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same nanoseconds when calling toNanoseconds()', () => {
@@ -80,12 +88,20 @@ describe('microseconds', () => {
   const unit = microseconds(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same microseconds when calling toMicroseconds()', () => {
@@ -141,12 +157,20 @@ describe('milliseconds', () => {
   const unit = milliseconds(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same milliseconds when calling toMilliseconds()', () => {
@@ -154,7 +178,7 @@ describe('milliseconds', () => {
   });
 
   it('converts milliseconds to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(1e+6);
+    expect(unit.toNanoseconds()).toBe(1e6);
   });
 
   it('converts milliseconds to microseconds', () => {
@@ -202,12 +226,20 @@ describe('seconds', () => {
   const unit = seconds(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same seconds when calling toSeconds()', () => {
@@ -215,11 +247,11 @@ describe('seconds', () => {
   });
 
   it('converts seconds to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(1e+9);
+    expect(unit.toNanoseconds()).toBe(1e9);
   });
 
   it('converts seconds to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(1e+6);
+    expect(unit.toMicroseconds()).toBe(1e6);
   });
 
   it('converts seconds to milliseconds', () => {
@@ -263,12 +295,20 @@ describe('minutes', () => {
   const unit = minutes(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same minutes when calling toMinutes()', () => {
@@ -276,11 +316,11 @@ describe('minutes', () => {
   });
 
   it('converts minutes to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(6e+10);
+    expect(unit.toNanoseconds()).toBe(6e10);
   });
 
   it('converts minutes to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(6e+7);
+    expect(unit.toMicroseconds()).toBe(6e7);
   });
 
   it('converts minutes to milliseconds', () => {
@@ -324,12 +364,20 @@ describe('hours', () => {
   const unit = hours(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same hours when calling toHours()', () => {
@@ -337,15 +385,15 @@ describe('hours', () => {
   });
 
   it('converts hours to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(3.6e+12);
+    expect(unit.toNanoseconds()).toBe(3.6e12);
   });
 
   it('converts hours to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(3.6e+9);
+    expect(unit.toMicroseconds()).toBe(3.6e9);
   });
 
   it('converts hours to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(3.6e+6);
+    expect(unit.toMilliseconds()).toBe(3.6e6);
   });
 
   it('converts hours to seconds', () => {
@@ -385,12 +433,20 @@ describe('days', () => {
   const unit = days(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same days when calling toDays()', () => {
@@ -398,15 +454,15 @@ describe('days', () => {
   });
 
   it('converts days to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(8.64e+13);
+    expect(unit.toNanoseconds()).toBe(8.64e13);
   });
 
   it('converts days to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(8.64e+10);
+    expect(unit.toMicroseconds()).toBe(8.64e10);
   });
 
   it('converts days to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(8.64e+7);
+    expect(unit.toMilliseconds()).toBe(8.64e7);
   });
 
   it('converts days to seconds', () => {
@@ -446,12 +502,20 @@ describe('weeks', () => {
   const unit = weeks(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same weeks when calling toWeeks()', () => {
@@ -459,15 +523,15 @@ describe('weeks', () => {
   });
 
   it('converts weeks to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(6.048e+14);
+    expect(unit.toNanoseconds()).toBe(6.048e14);
   });
 
   it('converts weeks to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(6.048e+11);
+    expect(unit.toMicroseconds()).toBe(6.048e11);
   });
 
   it('converts weeks to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(6.048e+8);
+    expect(unit.toMilliseconds()).toBe(6.048e8);
   });
 
   it('converts weeks to seconds', () => {
@@ -507,12 +571,20 @@ describe('months', () => {
   const unit = months(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same months when calling toMonths()', () => {
@@ -520,19 +592,19 @@ describe('months', () => {
   });
 
   it('converts months to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(2.628e+15);
+    expect(unit.toNanoseconds()).toBe(2.628e15);
   });
 
   it('converts months to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(2.628e+12);
+    expect(unit.toMicroseconds()).toBe(2.628e12);
   });
 
   it('converts months to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(2.628e+9);
+    expect(unit.toMilliseconds()).toBe(2.628e9);
   });
 
   it('converts months to seconds', () => {
-    expect(unit.toSeconds()).toBe(2.628e+6);
+    expect(unit.toSeconds()).toBe(2.628e6);
   });
 
   it('converts months to minutes', () => {
@@ -568,12 +640,20 @@ describe('years', () => {
   const unit = years(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same years when calling toYears()', () => {
@@ -581,19 +661,19 @@ describe('years', () => {
   });
 
   it('converts years to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(3.154e+16);
+    expect(unit.toNanoseconds()).toBe(3.154e16);
   });
 
   it('converts years to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(3.154e+13);
+    expect(unit.toMicroseconds()).toBe(3.154e13);
   });
 
   it('converts years to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(3.154e+10);
+    expect(unit.toMilliseconds()).toBe(3.154e10);
   });
 
   it('converts years to seconds', () => {
-    expect(unit.toSeconds()).toBe(3.154e+7);
+    expect(unit.toSeconds()).toBe(3.154e7);
   });
 
   it('converts years to minutes', () => {
@@ -629,12 +709,20 @@ describe('decades', () => {
   const unit = decades(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same decades when calling toDecades()', () => {
@@ -642,23 +730,23 @@ describe('decades', () => {
   });
 
   it('converts decades to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(3.154e+17);
+    expect(unit.toNanoseconds()).toBe(3.154e17);
   });
 
   it('converts decades to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(3.154e+14);
+    expect(unit.toMicroseconds()).toBe(3.154e14);
   });
 
   it('converts decades to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(3.154e+11);
+    expect(unit.toMilliseconds()).toBe(3.154e11);
   });
 
   it('converts decades to seconds', () => {
-    expect(unit.toSeconds()).toBe(3.154e+8);
+    expect(unit.toSeconds()).toBe(3.154e8);
   });
 
   it('converts decades to minutes', () => {
-    expect(unit.toMinutes()).toBe(5.256e+6);
+    expect(unit.toMinutes()).toBe(5.256e6);
   });
 
   it('converts decades to hours', () => {
@@ -690,12 +778,20 @@ describe('centuries', () => {
   const unit = centuries(1);
 
   it('creates a valid instance of the converter', () => {
-    expect(Object.getOwnPropertyNames(unit)).toEqual(
-      [
-        'toNanoseconds', 'toMicroseconds', 'toMilliseconds', 'toSeconds', 'toMinutes',
-        'toHours', 'toDays', 'toWeeks', 'toMonths', 'toYears', 'toDecades', 'toCenturies'
-      ]
-    );
+    expect(Object.getOwnPropertyNames(unit)).toEqual([
+      'toNanoseconds',
+      'toMicroseconds',
+      'toMilliseconds',
+      'toSeconds',
+      'toMinutes',
+      'toHours',
+      'toDays',
+      'toWeeks',
+      'toMonths',
+      'toYears',
+      'toDecades',
+      'toCenturies',
+    ]);
   });
 
   it('returns the same centuries when calling toCenturies()', () => {
@@ -703,23 +799,23 @@ describe('centuries', () => {
   });
 
   it('converts centuries to nanoseconds', () => {
-    expect(unit.toNanoseconds()).toBe(3.154e+18);
+    expect(unit.toNanoseconds()).toBe(3.154e18);
   });
 
   it('converts centuries to microseconds', () => {
-    expect(unit.toMicroseconds()).toBe(3.154e+15);
+    expect(unit.toMicroseconds()).toBe(3.154e15);
   });
 
   it('converts centuries to milliseconds', () => {
-    expect(unit.toMilliseconds()).toBe(3.154e+12);
+    expect(unit.toMilliseconds()).toBe(3.154e12);
   });
 
   it('converts centuries to seconds', () => {
-    expect(unit.toSeconds()).toBe(3.154e+9);
+    expect(unit.toSeconds()).toBe(3.154e9);
   });
 
   it('converts centuries to minutes', () => {
-    expect(unit.toMinutes()).toBe(5.256e+7);
+    expect(unit.toMinutes()).toBe(5.256e7);
   });
 
   it('converts centuries to hours', () => {
