@@ -46,7 +46,7 @@ describe('capitalize', () => {
 
   it('throws exception when a non-boolean is passed', () => {
     expect(() => capitalize('hello world', null)).toThrow();
-    
+
     expect(() => capitalize('hello world', 0)).toThrow();
     expect(() => capitalize('hello world', 'true')).toThrow();
     expect(() => capitalize('hello world', 'false')).toThrow();

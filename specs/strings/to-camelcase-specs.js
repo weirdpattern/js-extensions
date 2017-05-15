@@ -24,11 +24,11 @@ describe('toCamelCase', () => {
   });
 
   it('converts to camelcase single words', () => {
-    expect(toCamelCase('Hello')).toEqual('hello');    
+    expect(toCamelCase('Hello')).toEqual('hello');
   });
 
   it('converts to camelcase', () => {
-    expect(toCamelCase('hello world')).toEqual('helloWorld');    
+    expect(toCamelCase('hello world')).toEqual('helloWorld');
   });
 
   it('throws exception when a non-string is passed', () => {
