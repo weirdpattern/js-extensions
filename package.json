@@ -4,7 +4,7 @@
 
   "name": "js-extensions",
   "description": "A set of extensions for common objects",
-  "author": "patricio trevino <patricio@weirdpattern.com",
+  "author": "patricio trevino <patricio@weirdpattern.com>",
 
   "private": true,
   "main": "lib/index.js",
