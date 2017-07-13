@@ -1,6 +1,6 @@
-const webpack = require('webpack');
+import webpack from 'webpack';
 
-module.exports = [
+export default [
   {
     entry: ['./lib/index.js'],
     output: {
@@ -10,11 +10,12 @@ module.exports = [
     module: {
       loaders: [
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
           loader: 'babel-loader',
           query: {
-            presets: ['es2015']
+            presets: ['es2015'],
+            plugins: ['transform-object-rest-spread'],
           },
         },
       ],
@@ -22,9 +23,7 @@ module.exports = [
     resolve: {
       extensions: ['', '.js'],
     },
-    plugins: [
-      new webpack.optimize.OccurenceOrderPlugin(true),
-    ],
+    plugins: [new webpack.optimize.OccurenceOrderPlugin(true)],
   },
   {
     entry: ['./lib/index.js'],
@@ -39,7 +38,8 @@ module.exports = [
           exclude: /(node_modules|bower_components)/,
           loader: 'babel-loader',
           query: {
-            presets: ['es2015']
+            presets: ['es2015'],
+            plugins: ['transform-object-rest-spread'],
           },
         },
       ],
@@ -47,9 +47,6 @@ module.exports = [
     resolve: {
       extensions: ['', '.js'],
     },
-    plugins: [
-      new webpack.optimize.OccurenceOrderPlugin(true),
-      new webpack.optimize.UglifyJsPlugin(),
-    ],
-  }
+    plugins: [new webpack.optimize.OccurenceOrderPlugin(true), new webpack.optimize.UglifyJsPlugin()],
+  },
 ];

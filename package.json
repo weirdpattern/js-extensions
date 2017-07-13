@@ -7,7 +7,9 @@
   "author": "patricio trevino <patricio@weirdpattern.com>",
 
   "private": true,
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "module": "lib/index.js",
+  "jsnext:main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://www.github.com/weirdpattern/js-extensions.git"
@@ -29,24 +31,35 @@
   ],
 
   "devDependencies": {
-    "babel-cli": "^6.23.0",
-    "babel-eslint": "^7.1.1",
-    "babel-jest": "^19.0.0",
-    "babel-loader": "^6.4.0",
-    "babel-preset-es2015": "^6.22.0",
-    "coveralls": "^2.12.0",
-    "prettier": "1.3.1",
-    "jest": "^19.0.2",
-    "jest-cli": "19.0.2",
-    "webpack": "^2.2.1"
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.2.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "eslint-plugin-prettier": "^2.1.2",
+    "jest": "^20.0.4",
+    "prettier": "1.5.2",
+    "webpack": "^3.2.0"
   },
 
   "scripts": {
-    "build": "webpack --config .webpackrc",
-    "test": "npm run pretty && npm run specs",
-    "pretty": "prettier --print-width 120 --tab-width 2 --single-quote --trailing-comma all --write {lib,specs}/**/*.js",
-    "specs": "jest --config .jestconfig",
-    "coverage": "jest --config .jestconfig --coverage",
-    "coveralls": "npm run coverage && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "build": "npm run prettify && npm run lint && npm run test && webpack --config ./support/webpack.config.babel.js",
+    "test": "jest --config .jestrc --silent",
+    "test:verbose": "jest --config .jestrc",
+    "test:watch": "jest --config .jestrc --silent --watch",
+    "test:coverage": "npm run test:coveralls && open ./coverage/lcov-report/index.html",
+    "test:coveralls": "jest --config .jestrc --coverage --silent",
+    "lint": "npm run lint:lib && npm run lint:specs && npm run lint:support",
+    "lint:lib": "eslint --config .eslintrc ./lib/*.js{,x} ./lib/**/*.js{,x}",
+    "lint:specs": "eslint --config .eslintrc ./specs/*.js{,x} ./specs/**/*.js{,x}",
+    "lint:support": "eslint --config .eslintrc ./support/*.js{,x} ./support/**/*.js{,x}",
+    "prettify": "prettier --config .prettierrc --write {lib,specs,support}/**/*.js",
+    "coveralls": "npm run test:coveralls && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   }
 }
